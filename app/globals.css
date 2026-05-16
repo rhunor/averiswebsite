@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Font CSS variables (loaded via <link> in layout.tsx) ── */
+:root {
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-playfair: 'Playfair Display', Georgia, serif;
+}
+
+/* ── Custom scrollbar ── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #070f1a; }
+::-webkit-scrollbar-thumb { background: #2d7f8f; border-radius: 2px; }
+
+/* ── Text selection ── */
+::selection { background: #2d7f8f; color: #fff; }
+
+/* ── Smooth scroll handled by Lenis ── */
+html { scroll-behavior: auto; }
+
+/* ── Hide default cursor on desktop when custom cursor active ── */
+@media (pointer: fine) {
+  body.custom-cursor,
+  body.custom-cursor * { cursor: none !important; }
+}
+
+/* ── Noise texture utility ── */
+.noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+}
+
+/* ── Grid background utility ── */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(45, 127, 143, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45, 127, 143, 0.04) 1px, transparent 1px);
+  background-size: 68px 68px;
+}
+
+/* ── CTA rotating gradient ── */
+.cta-rotate {
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    transparent 0deg,
+    rgba(45, 127, 143, 0.15) 60deg,
+    transparent 120deg,
+    rgba(45, 127, 143, 0.08) 180deg,
+    transparent 240deg,
+    rgba(45, 127, 143, 0.12) 300deg,
+    transparent 360deg
+  );
+}
+
+/* ── Bar chart animation ── */
+.bar {
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.bar.grown { transform: scaleY(1); }
+
+/* ── Service card dark overlay ── */
+.svc-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(140deg, #0d2035 0%, #1a3a52 55%, #1f5f6e 100%);
+  transform: translateY(102%);
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 0;
+}
+.group:hover .svc-overlay { transform: translateY(0); }
