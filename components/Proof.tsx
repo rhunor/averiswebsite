@@ -73,7 +73,7 @@ export default function Proof() {
             viewport={{ once: true, margin: '-60px' }}
             className="mb-5"
           >
-            <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.12em] uppercase px-4 py-[7px] rounded-full bg-white/6 border border-white/12 text-white/65">
+            <span className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.12em] uppercase px-4 py-[7px] rounded-full bg-white/8 border border-white/18 text-white/80">
               <span className="w-[5px] h-[5px] rounded-full bg-teal-bright animate-[pillDot_2s_ease-in-out_infinite]" />
               Real Results
             </span>
@@ -93,7 +93,7 @@ export default function Proof() {
             initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
             viewport={{ once: true, margin: '-60px' }}
-            className="text-[17px] text-white/55 leading-[1.78]"
+            className="text-[17px] text-white/70 leading-[1.78]"
           >
             Week 1 alone: 70 members, ₦2.45M in revenue. These aren&apos;t projections — they&apos;re
             what happened before we even finished this website.
@@ -115,7 +115,7 @@ export default function Proof() {
               <div className="text-[clamp(26px,3vw,40px)] font-black text-white tracking-[-0.04em] leading-none mb-[9px]">
                 {s.display}
               </div>
-              <div className="text-[11px] text-white/38 uppercase tracking-[0.09em] font-semibold">{s.label}</div>
+              <div className="text-[11px] text-white/60 uppercase tracking-[0.09em] font-semibold">{s.label}</div>
             </div>
           ))}
         </motion.div>
@@ -152,7 +152,7 @@ export default function Proof() {
                 </div>
                 <div>
                   <div className="text-[14px] font-bold text-white">{t.name}</div>
-                  <div className="text-[12px] text-white/42">{t.detail}</div>
+                  <div className="text-[12px] text-white/60">{t.detail}</div>
                   <div className="inline-flex items-center gap-[5px] mt-[9px] text-[12px] font-bold px-3 py-1 rounded-full bg-teal/15 border border-teal/25 text-teal-bright">
                     {t.badge}
                   </div>

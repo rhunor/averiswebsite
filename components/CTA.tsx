@@ -50,7 +50,7 @@ export default function CTA() {
               initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.25 }}
               viewport={{ once: true, margin: '-60px' }}
-              className="text-[18px] text-white/62 max-w-[470px] mx-auto leading-[1.72] mb-11"
+              className="text-[18px] text-white/75 max-w-[470px] mx-auto leading-[1.72] mb-11"
             >
               Join 70+ Nigerians already building wealth with the Averis system. Your first
               ₦100,000 could be 30 days away.

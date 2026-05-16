@@ -21,8 +21,8 @@ const checks = [
     text: 'We teach you to earn it, then grow it into generational wealth. Nobody else in Nigeria does both.',
   },
   {
-    title: 'Proven founder',
-    text: '₦0 to ₦5M/month in 12 months. Nigerian. Recent. Provable. Still actively doing it today.',
+    title: 'Proven results',
+    text: '₦0 to ₦5M/month in 12 months, built right here in Nigeria. Recent, verifiable, and still compounding today.',
   },
 ]
 
@@ -106,7 +106,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* ── Right: Founder card ── */}
+          {/* ── Right: Track record card ── */}
           <motion.div
             initial={{ opacity: 0, x: 52 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -115,9 +115,9 @@ export default function About() {
             className="relative"
           >
             <div className="bg-navy-dark rounded-[32px] overflow-hidden">
-              {/* Photo area */}
+              {/* Header graphic */}
               <div
-                className="h-[290px] flex items-center justify-center relative overflow-hidden"
+                className="h-[200px] flex items-center justify-center relative overflow-hidden"
                 style={{ background: 'linear-gradient(135deg, #1a3a52 0%, #1f5f6e 100%)' }}
               >
                 <div className="absolute inset-0" style={{
@@ -126,30 +126,50 @@ export default function About() {
                 <div className="absolute bottom-0 left-0 right-0 h-[1px]"
                   style={{ background: 'linear-gradient(90deg, transparent, rgba(45,127,143,0.5), transparent)' }}
                 />
-                <div className="w-24 h-24 rounded-full bg-white/10 border-2 border-white/18 flex items-center justify-center text-[32px] font-black text-white relative z-10">
-                  CI
+                {/* Large ₦ mark */}
+                <div
+                  className="absolute font-black text-white/10 select-none leading-none"
+                  style={{ fontSize: '14rem' }}
+                  aria-hidden="true"
+                >
+                  ₦
+                </div>
+                <div className="relative z-10 text-center">
+                  <div className="text-[11px] font-bold uppercase tracking-[0.15em] text-teal-bright mb-2">
+                    The Averis Track Record
+                  </div>
+                  <div
+                    className="text-[42px] font-black tracking-[-0.04em]"
+                    style={{
+                      background: 'linear-gradient(95deg, #2d7f8f, #4dbdd4)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                    }}
+                  >
+                    ₦0 → ₦5M
+                  </div>
+                  <div className="text-[13px] text-white/65 mt-1">in 12 months · Nigeria</div>
                 </div>
               </div>
 
               {/* Body */}
               <div className="p-7 pb-8">
-                <div className="text-[19px] font-black text-white tracking-tight mb-[3px]">Caleb Iwanneka</div>
-                <div className="text-[12px] font-bold text-teal-bright uppercase tracking-[0.09em] mb-5">Founder, Averis Academy</div>
-                <blockquote className="text-[15px] text-white/62 leading-[1.72] font-serif italic border-l-2 border-teal pl-4 mb-6">
+                <blockquote className="text-[15px] text-white/72 leading-[1.75] font-serif italic border-l-2 border-teal pl-4 mb-6">
                   &ldquo;I was broke 12 months ago. I understand the frustration. I built the system I wish
                   existed when I was starting — now I&apos;m handing it to you.&rdquo;
                 </blockquote>
                 <div className="flex gap-[18px] pt-5 border-t border-white/8">
                   {[
                     { val: '₦5M', unit: '', label: 'Per Month' },
-                    { val: '12',  unit: '',  label: 'Months to get there' },
+                    { val: '12',  unit: '',  label: 'Months to achieve' },
                     { val: '70',  unit: '+', label: 'Month 1 Students' },
                   ].map(s => (
                     <div key={s.label}>
                       <div className="text-[22px] font-black text-white tracking-tight">
                         {s.val}<span className="text-teal-bright">{s.unit}</span>
                       </div>
-                      <div className="text-[11px] text-white/38 uppercase tracking-[0.08em]">{s.label}</div>
+                      <div className="text-[11px] text-white/58 uppercase tracking-[0.08em]">{s.label}</div>
                     </div>
                   ))}
                 </div>
