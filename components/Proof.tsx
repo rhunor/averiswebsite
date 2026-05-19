@@ -142,7 +142,7 @@ export default function Proof() {
                 ))}
               </div>
 
-              <p className="text-[15px] text-white/73 leading-[1.78] mb-6 font-serif italic">
+              <p className="text-[15px] text-white/85 leading-[1.78] mb-6 font-serif italic">
                 {t.quote}
               </p>
 

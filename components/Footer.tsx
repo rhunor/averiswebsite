@@ -29,7 +29,7 @@ const socials = [
   },
   {
     label: 'Twitter / X',
-    href: '#',
+    href: 'https://x.com/averisacademy?s=21',
     icon: (
       <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -37,17 +37,8 @@ const socials = [
     ),
   },
   {
-    label: 'Facebook',
-    href: '#',
-    icon: (
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-      </svg>
-    ),
-  },
-  {
     label: 'YouTube',
-    href: '#',
+    href: 'https://youtube.com/@calebekenenwanneka1829?si=dFirxJzQtriHSFO6',
     icon: (
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
         <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
@@ -104,7 +95,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Logo />
-            <p className="text-[14px] text-white/42 leading-[1.77] max-w-[272px] mt-4 mb-6">
+            <p className="text-[14px] text-white/78 leading-[1.77] max-w-[272px] mt-4 mb-6">
               Nigeria&apos;s premier wealth-building platform. We teach you to make money, then help
               you grow it into generational wealth.
             </p>
@@ -137,7 +128,7 @@ export default function Footer() {
                       href={l.href}
                       target={l.href.startsWith('http') ? '_blank' : undefined}
                       rel="noopener noreferrer"
-                      className="text-[14px] text-white/42 hover:text-teal-bright transition-colors duration-200"
+                      className="text-[14px] text-white/78 hover:text-teal-bright transition-colors duration-200"
                     >
                       {l.label}
                     </a>
@@ -150,14 +141,14 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/6 pt-7 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[13px] text-white/28">
+          <p className="text-[13px] text-white/65">
             © 2026{' '}
             <a href="#" className="text-teal-bright hover:underline">Averis Global Limited</a>.
             {' '}All rights reserved.
           </p>
           <div className="flex gap-6">
             {['Privacy Policy', 'Terms of Service', 'Disclaimer'].map(l => (
-              <a key={l} href="#" className="text-[13px] text-white/28 hover:text-teal-bright transition-colors duration-200">
+              <a key={l} href="#" className="text-[13px] text-white/65 hover:text-teal-bright transition-colors duration-200">
                 {l}
               </a>
             ))}

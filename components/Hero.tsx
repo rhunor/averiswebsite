@@ -198,7 +198,7 @@ export default function Hero() {
             className="flex flex-col items-start gap-[14px] mb-14"
           >
             <a
-              href="#contact"
+              href="mailto:hello@averisacademy.com"
               className="inline-flex items-center gap-[10px] px-8 py-[15px] bg-teal text-white text-[15px] font-bold rounded-lg hover:bg-teal-light hover:-translate-y-[2px] hover:shadow-[0_20px_48px_rgba(45,127,143,0.42)] transition-all duration-300 relative overflow-hidden group"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.12] to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500" />
@@ -223,7 +223,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.86 }}
-            className="flex items-center flex-wrap gap-x-5 gap-y-2 text-[13px] text-white/38 border-t border-white/[0.06] pt-7"
+            className="flex items-center flex-wrap gap-x-5 gap-y-2 text-[13px] text-white/72 border-t border-white/[0.12] pt-7"
           >
             <span>
               <strong className="text-white/78 font-bold">70+</strong> members enrolled

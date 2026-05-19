@@ -155,7 +155,7 @@ export default function About() {
 
               {/* Body */}
               <div className="p-7 pb-8">
-                <blockquote className="text-[15px] text-white/72 leading-[1.75] font-serif italic border-l-2 border-teal pl-4 mb-6">
+                <blockquote className="text-[15px] text-white/85 leading-[1.75] font-serif italic border-l-2 border-teal pl-4 mb-6">
                   &ldquo;I was broke 12 months ago. I understand the frustration. I built the system I wish
                   existed when I was starting — now I&apos;m handing it to you.&rdquo;
                 </blockquote>
