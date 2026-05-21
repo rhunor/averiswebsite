@@ -13,7 +13,7 @@ interface CardData {
 
 const cards: CardData[] = [
   {
-    phase: 'Phase 01',
+    phase: 'Foundation',
     icon: '💰',
     title: 'Averis Academy',
     price: '₦35,000 / 6 Months',
@@ -27,31 +27,31 @@ const cards: CardData[] = [
     ],
   },
   {
-    phase: 'Phase 02',
-    icon: '📈',
-    title: 'Averis Wealth Club',
-    price: '₦100,000 Minimum Investment',
-    desc: 'Turn your Academy earnings into a ₦10M–₦50M+ portfolio with curated investment guidance and a private investor community.',
+    phase: 'Community',
+    icon: '🎯',
+    title: 'Coaching & Accountability',
+    price: 'Included with Academy',
+    desc: 'You are never alone. Weekly live sessions, peer accountability trios, and a private student community keep you on track every single day.',
     features: [
-      'Stock Market & Crypto Education',
-      'Monthly Investment Alerts',
-      'Portfolio Rebalancing Guidance',
-      'Done-For-You Management',
-      'Private Investor Community',
+      'Weekly Live Group Coaching',
+      'Peer Accountability Trios',
+      'Daily Check-in System',
+      'Private Student Community',
+      'Direct Mentor Access',
     ],
   },
   {
-    phase: 'Elite',
-    icon: '🏆',
-    title: '8-Figure Club',
-    price: '₦500K/year · Launching 2027',
-    desc: 'For members who\'ve earned ₦10M+ lifetime. Advanced mastermind, direct founder access, and exclusive investment opportunities.',
+    phase: 'Advanced',
+    icon: '🚀',
+    title: 'Income Acceleration',
+    price: 'Included with Academy',
+    desc: 'Once you are earning, we show you how to scale. Advanced ad strategies, automation systems, and the freelance/agency model to 10× your income.',
     features: [
-      'Advanced Business Strategies',
-      'Direct Founder Access',
-      'Elite Networking Events',
-      'Mastermind Retreats',
-      'Priority Investment Opportunities',
+      'Advanced Paid Ads Scaling',
+      'Income Automation Systems',
+      'Freelance & Agency Model',
+      'High-Ticket Offer Strategies',
+      'Lifetime Access & Updates',
     ],
   },
 ]
@@ -131,8 +131,8 @@ export default function Services() {
             viewport={{ once: true, margin: '-60px' }}
             className="text-[clamp(32px,4.2vw,56px)] font-black tracking-[-0.04em] leading-[1.06] text-navy-dark mb-5"
           >
-            Two phases.<br />
-            One <em className="font-serif italic font-extrabold text-teal">complete</em> system.
+            Everything you need<br />
+            to earn <em className="font-serif italic font-extrabold text-teal">online.</em>
           </motion.h2>
 
           <motion.p
@@ -141,8 +141,8 @@ export default function Services() {
             viewport={{ once: true, margin: '-60px' }}
             className="text-[17px] text-slate-600 leading-[1.78]"
           >
-            Most courses teach you to make money. We teach you to make money AND grow it into
-            generational wealth. Nobody else in Nigeria does both.
+            One structured program. Live coaching. A community that holds you accountable.
+            Everything built to get you earning real money online — in Nigeria.
           </motion.p>
         </div>
 

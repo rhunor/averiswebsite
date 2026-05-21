@@ -63,7 +63,7 @@ export default function CTA() {
               className="flex gap-4 justify-center flex-wrap"
             >
               <a
-                href="https://wa.me/2349166257582"
+                href="https://wa.me/2348148818354"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-[10px] px-9 py-[18px] bg-white text-navy-dark text-[15px] font-black rounded-lg hover:-translate-y-[2px] hover:shadow-[0_18px_44px_rgba(0,0,0,0.22)] transition-all duration-300 relative overflow-hidden group"
