@@ -184,7 +184,7 @@ export default function Hero() {
             className="text-[clamp(15px,1.4vw,17px)] text-white/50 leading-[1.88] max-w-[490px] mb-11"
           >
             {/* Phase 1 —  */}
-            earn{' '}
+            Earn{' '}
             <span className="text-white/82 font-semibold">₦500K–₦1M/month</span> through digital
             marketing in 90 days. 
             {/* Phase 2 — grow it into a{' '}
