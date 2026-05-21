@@ -57,8 +57,8 @@ export default function TermsOfService() {
             <Section title="1. Acceptance of Terms">
               <p>
                 These Terms of Service constitute a legally binding agreement between you and
-                <strong className="text-white"> Averis Global Limited</strong> ("Averis Academy",
-                "we", "us"). By completing enrollment and making payment, you confirm that you have
+                <strong className="text-white"> Averis Global Limited</strong> (&ldquo;Averis Academy&rdquo;,
+                &ldquo;we&rdquo;, &ldquo;us&rdquo;). By completing enrollment and making payment, you confirm that you have
                 read, understood, and agreed to these terms.
               </p>
             </Section>
@@ -122,7 +122,7 @@ export default function TermsOfService() {
 
             <Section title="7. Disclaimer of Warranties">
               <p>
-                Averis Academy programs are provided "as is". We make no guarantees regarding
+                Averis Academy programs are provided &ldquo;as is&rdquo;. We make no guarantees regarding
                 specific financial outcomes, income levels, or business results. Testimonials and
                 case studies shared on our website represent individual results and are not typical.
                 Your results will depend entirely on your own effort and circumstances.
