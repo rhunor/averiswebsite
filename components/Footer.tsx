@@ -147,11 +147,12 @@ export default function Footer() {
             {' '}All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            {['Privacy Policy', 'Terms of Service'].map(l => (
-              <a key={l} href="#" className="text-[13px] text-slate-400 hover:text-teal-bright transition-colors duration-200">
-                {l}
-              </a>
-            ))}
+            <a href="/privacy-policy" className="text-[13px] text-slate-400 hover:text-teal-bright transition-colors duration-200">
+              Privacy Policy
+            </a>
+            <a href="/terms-of-service" className="text-[13px] text-slate-400 hover:text-teal-bright transition-colors duration-200">
+              Terms of Service
+            </a>
             <a href="/refund-policy" className="text-[13px] text-slate-400 hover:text-teal-bright transition-colors duration-200">
               Refund Policy
             </a>

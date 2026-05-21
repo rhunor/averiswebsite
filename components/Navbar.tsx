@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const links = [
@@ -10,9 +11,9 @@ const links = [
   { label: 'How It Works',href: '#process' },
 ]
 
-function Logo({ isLight }: { isLight: boolean }) {
+function Logo({ isLight, isHome }: { isLight: boolean; isHome: boolean }) {
   return (
-    <a href="#hero" className="flex items-center gap-3">
+    <a href={isHome ? '#hero' : '/'} className="flex items-center gap-3">
       <div className="w-[38px] h-[38px] rounded-[10px] bg-gradient-to-br from-teal to-teal-light flex items-center justify-center relative overflow-hidden flex-shrink-0">
         <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent" />
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="relative z-10">
@@ -30,13 +31,17 @@ function Logo({ isLight }: { isLight: boolean }) {
 const LIGHT_SECTIONS = new Set(['about', 'services', 'process', 'contact'])
 
 export default function Navbar() {
-  const [scrolled, setScrolled]   = useState(false)
-  const [active,   setActive]     = useState('')
-  const [menuOpen, setMenuOpen]   = useState(false)
+  const pathname  = usePathname()
+  const isHome    = pathname === '/'
+
+  const [scrolled, setScrolled] = useState(false)
+  const [active,   setActive]   = useState('')
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 55)
+      if (!isHome) return
 
       const sections = ['hero','about','services','proof','process','contact']
       let cur = ''
@@ -48,15 +53,24 @@ export default function Navbar() {
     }
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  }, [isHome])
 
-  const isLight = LIGHT_SECTIONS.has(active)
+  const isLight = isHome && LIGHT_SECTIONS.has(active)
 
   const smoothScroll = (href: string) => {
     setMenuOpen(false)
     const id = href.replace('#', '')
     const el = document.getElementById(id)
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  // On sub-pages, links point back to home with the hash
+  const resolveHref = (href: string) => isHome ? href : `/${href}`
+
+  const handleClick = (e: React.MouseEvent, href: string) => {
+    if (!isHome) return           // let normal navigation happen
+    e.preventDefault()
+    smoothScroll(href)
   }
 
   return (
@@ -73,17 +87,17 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-[1240px] mx-auto px-8 flex items-center justify-between">
-          <Logo isLight={isLight} />
+          <Logo isLight={isLight} isHome={isHome} />
 
           {/* Desktop links */}
           <nav className="hidden md:flex items-center gap-1">
             {links.map(l => (
               <a
                 key={l.href}
-                href={l.href}
-                onClick={e => { e.preventDefault(); smoothScroll(l.href) }}
+                href={resolveHref(l.href)}
+                onClick={e => handleClick(e, l.href)}
                 className={`px-4 py-2 text-[14px] font-medium rounded-lg transition-colors duration-200 ${
-                  active === l.href.replace('#','')
+                  isHome && active === l.href.replace('#','')
                     ? 'text-teal'
                     : isLight
                       ? 'text-navy-dark/65 hover:text-navy-dark hover:bg-navy-darkest/6'
@@ -94,8 +108,8 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#contact"
-              onClick={e => { e.preventDefault(); smoothScroll('#contact') }}
+              href={resolveHref('#contact')}
+              onClick={e => handleClick(e, '#contact')}
               className="ml-2 px-6 py-[10px] bg-teal text-white text-[14px] font-bold rounded-lg hover:bg-teal-light transition-all duration-300 hover:shadow-[0_8px_22px_rgba(45,127,143,0.4)] hover:-translate-y-px"
             >
               Get Started →
@@ -135,8 +149,8 @@ export default function Navbar() {
             {links.map((l, i) => (
               <motion.a
                 key={l.href}
-                href={l.href}
-                onClick={e => { e.preventDefault(); smoothScroll(l.href) }}
+                href={resolveHref(l.href)}
+                onClick={e => handleClick(e, l.href)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.07 }}
@@ -146,8 +160,8 @@ export default function Navbar() {
               </motion.a>
             ))}
             <motion.a
-              href="#contact"
-              onClick={e => { e.preventDefault(); smoothScroll('#contact') }}
+              href={resolveHref('#contact')}
+              onClick={e => handleClick(e, '#contact')}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: links.length * 0.07 }}
