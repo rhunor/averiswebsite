@@ -183,11 +183,13 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.6 }}
             className="text-[clamp(15px,1.4vw,17px)] text-white/50 leading-[1.88] max-w-[490px] mb-11"
           >
-            Phase 1 — earn{' '}
+            {/* Phase 1 —  */}
+            earn{' '}
             <span className="text-white/82 font-semibold">₦500K–₦1M/month</span> through digital
-            marketing in 90 days. Phase 2 — grow it into a{' '}
+            marketing in 90 days. 
+            {/* Phase 2 — grow it into a{' '}
             <span className="text-white/82 font-semibold">₦10M–₦50M+ investment portfolio.</span>{' '}
-            One system. Two phases. No guesswork.
+            One system. Two phases. No guesswork. */}
           </motion.p>
 
           {/* CTA */}

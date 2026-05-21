@@ -95,7 +95,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Logo />
-            <p className="text-[14px] text-white/78 leading-[1.77] max-w-[272px] mt-4 mb-6">
+            <p className="text-[14px] text-slate-300 leading-[1.77] max-w-[272px] mt-4 mb-6">
               Nigeria&apos;s premier wealth-building platform. We teach you to make money, then help
               you grow it into generational wealth.
             </p>
@@ -128,7 +128,7 @@ export default function Footer() {
                       href={l.href}
                       target={l.href.startsWith('http') ? '_blank' : undefined}
                       rel="noopener noreferrer"
-                      className="text-[14px] text-white/78 hover:text-teal-bright transition-colors duration-200"
+                      className="text-[14px] text-slate-300 hover:text-teal-bright transition-colors duration-200"
                     >
                       {l.label}
                     </a>
@@ -141,17 +141,20 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/6 pt-7 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[13px] text-white/65">
+          <p className="text-[13px] text-slate-400">
             © 2026{' '}
             <a href="#" className="text-teal-bright hover:underline">Averis Global Limited</a>.
             {' '}All rights reserved.
           </p>
-          <div className="flex gap-6">
-            {['Privacy Policy', 'Terms of Service', 'Disclaimer'].map(l => (
-              <a key={l} href="#" className="text-[13px] text-white/65 hover:text-teal-bright transition-colors duration-200">
+          <div className="flex flex-wrap justify-center gap-6">
+            {['Privacy Policy', 'Terms of Service'].map(l => (
+              <a key={l} href="#" className="text-[13px] text-slate-400 hover:text-teal-bright transition-colors duration-200">
                 {l}
               </a>
             ))}
+            <a href="/refund-policy" className="text-[13px] text-slate-400 hover:text-teal-bright transition-colors duration-200">
+              Refund Policy
+            </a>
           </div>
         </div>
 

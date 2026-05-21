@@ -81,8 +81,7 @@ export default function About() {
               className="text-[16px] text-slate-600 leading-[1.8] mb-8"
             >
               Averis Academy breaks that cycle. We teach you a skill that pays you whether you&apos;re
-              awake or asleep. Then we help you invest those earnings so your money works harder than
-              you ever could.
+              awake or asleep. 
             </motion.p>
 
             <div className="flex flex-col gap-[13px]">

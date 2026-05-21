@@ -15,12 +15,6 @@ const steps = [
     title: 'Earn',
     body: 'Run ads, build audiences, sell digital products. Most students make their first ₦100,000 within 30 days. By Month 6: ₦500K–₦1M/month.',
   },
-  {
-    icon: '🏛️',
-    num: 'Step 03',
-    title: 'Invest',
-    body: 'Join the Averis Wealth Club with ₦100K+. Professionally guided portfolios compound your income into ₦10M–₦50M+ in long-term generational wealth.',
-  },
 ]
 
 export default function Process() {
@@ -48,8 +42,8 @@ export default function Process() {
             viewport={{ once: true, margin: '-60px' }}
             className="text-[clamp(32px,4.2vw,56px)] font-black tracking-[-0.04em] leading-[1.06] text-navy-dark mb-5"
           >
-            Three steps to{' '}
-            <em className="font-serif italic font-extrabold text-teal">financial freedom.</em>
+            Two steps to{' '}
+            <em className="font-serif italic font-extrabold text-teal">earning online.</em>
           </motion.h2>
 
           <motion.p
@@ -58,12 +52,12 @@ export default function Process() {
             viewport={{ once: true, margin: '-60px' }}
             className="text-[17px] text-slate-600 leading-[1.78]"
           >
-            No confusion. No fluff. A clear path from where you are to where you want to be.
+            No confusion. No fluff. Learn the skill, then use it to earn real money online.
           </motion.p>
         </div>
 
         {/* Timeline */}
-        <div className="relative grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0">
           {/* Connector line — desktop only */}
           <motion.div
             initial={{ scaleX: 0 }}
@@ -72,8 +66,8 @@ export default function Process() {
             viewport={{ once: true, margin: '-60px' }}
             className="absolute top-[43px] hidden md:block"
             style={{
-              left: 'calc(16.67% + 10px)',
-              right: 'calc(16.67% + 10px)',
+              left: 'calc(25% + 43px)',
+              right: 'calc(25% + 43px)',
               height: '2px',
               background: 'linear-gradient(90deg, #2d7f8f 0%, #1f5f6e 50%, #1a3a52 100%)',
               transformOrigin: 'left',
