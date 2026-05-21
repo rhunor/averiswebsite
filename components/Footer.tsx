@@ -81,7 +81,7 @@ const footerCols = [
       { label: 'hello@averisacademy.com', href: 'mailto:hello@averisacademy.com' },
       { label: '+234 814 881 8354',       href: 'tel:+2348148818354' },
       { label: 'WhatsApp: +234 814 881 8354', href: 'https://wa.me/2348148818354' },
-      { label: '8 Tulip Heaven Estate, Chevron Alternative, Lekki, Lagos', href: '#' },
+      { label: 'Tulip Haven Estate, B4 River View Terrace, Agungi, Lekki', href: '#' },
     ],
   },
 ]

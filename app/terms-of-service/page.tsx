@@ -186,7 +186,7 @@ export default function TermsOfService() {
                     </svg>
                   </span>
                   <span className="text-[15px] text-white">
-                    8 Tulip Heaven Estate, Chevron Alternative, Lekki, Lagos
+                    Tulip Haven Estate, B4 River View Terrace, Agungi, Lekki
                   </span>
                 </div>
               </div>

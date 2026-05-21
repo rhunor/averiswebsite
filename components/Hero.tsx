@@ -74,7 +74,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen bg-navy-darkest relative overflow-hidden flex items-center pt-[130px] pb-24"
+      className="min-h-screen bg-navy-darkest relative overflow-hidden flex items-start lg:items-center pt-[130px] pb-24"
     >
       {/* Large ₦ watermark */}
       <div
