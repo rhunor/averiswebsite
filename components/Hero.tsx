@@ -211,7 +211,7 @@ export default function Hero() {
             </a>
             <a
               href="#services"
-              className="flex items-center gap-[7px] text-[13px] text-white/38 hover:text-white/65 transition-colors duration-200"
+              className="flex items-center gap-[7px] text-[13px] text-slate-400 hover:text-slate-200 transition-colors duration-200"
             >
               See how the system works
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -225,18 +225,18 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.86 }}
-            className="flex items-center flex-wrap gap-x-5 gap-y-2 text-[13px] text-white/72 border-t border-white/[0.12] pt-7"
+            className="flex items-center flex-wrap gap-x-5 gap-y-2 text-[13px] text-slate-300 border-t border-white/[0.12] pt-7"
           >
             <span>
-              <strong className="text-white/78 font-bold">70+</strong> members enrolled
+              <strong className="text-white font-bold">70+</strong> members enrolled
             </span>
-            <span className="w-[3px] h-[3px] rounded-full bg-white/20 flex-shrink-0" />
+            <span className="w-[3px] h-[3px] rounded-full bg-slate-500 flex-shrink-0" />
             <span>
-              <strong className="text-white/78 font-bold">₦2.4M</strong> earned in week 1
+              <strong className="text-white font-bold">₦2.4M</strong> earned in week 1
             </span>
-            <span className="w-[3px] h-[3px] rounded-full bg-white/20 flex-shrink-0" />
+            <span className="w-[3px] h-[3px] rounded-full bg-slate-500 flex-shrink-0" />
             <span>
-              Launched <strong className="text-white/78 font-bold">May 2025</strong>
+              Launched <strong className="text-white font-bold">May 2025</strong>
             </span>
           </motion.div>
         </div>
