@@ -69,7 +69,7 @@ export default function Process() {
               left: 'calc(25% + 43px)',
               right: 'calc(25% + 43px)',
               height: '2px',
-              background: 'linear-gradient(90deg, #2d7f8f 0%, #1f5f6e 50%, #1a3a52 100%)',
+              background: 'linear-gradient(90deg, #31b845 0%, #24963b 50%, #122f38 100%)',
               transformOrigin: 'left',
             }}
           />

@@ -35,7 +35,7 @@ export default function About() {
       {/* top line decoration */}
       <div
         className="absolute top-0 left-0 right-0 h-[1px]"
-        style={{ background: 'linear-gradient(90deg, transparent, rgba(45,127,143,0.35), transparent)' }}
+        style={{ background: 'linear-gradient(90deg, transparent, rgba(49,184,69,0.35), transparent)' }}
       />
 
       <div className="max-w-[1240px] mx-auto px-8">
@@ -117,13 +117,13 @@ export default function About() {
               {/* Header graphic */}
               <div
                 className="h-[200px] flex items-center justify-center relative overflow-hidden"
-                style={{ background: 'linear-gradient(135deg, #1a3a52 0%, #1f5f6e 100%)' }}
+                style={{ background: 'linear-gradient(135deg, #122f38 0%, #24963b 100%)' }}
               >
                 <div className="absolute inset-0" style={{
-                  background: 'radial-gradient(circle at 32% 68%, rgba(45,127,143,0.4) 0%, transparent 52%), radial-gradient(circle at 70% 22%, rgba(26,58,82,0.65) 0%, transparent 48%)',
+                  background: 'radial-gradient(circle at 32% 68%, rgba(49,184,69,0.4) 0%, transparent 52%), radial-gradient(circle at 70% 22%, rgba(14,32,40,0.65) 0%, transparent 48%)',
                 }} />
                 <div className="absolute bottom-0 left-0 right-0 h-[1px]"
-                  style={{ background: 'linear-gradient(90deg, transparent, rgba(45,127,143,0.5), transparent)' }}
+                  style={{ background: 'linear-gradient(90deg, transparent, rgba(49,184,69,0.5), transparent)' }}
                 />
                 {/* Large ₦ mark */}
                 <div
@@ -140,7 +140,7 @@ export default function About() {
                   <div
                     className="text-[42px] font-black tracking-[-0.04em]"
                     style={{
-                      background: 'linear-gradient(95deg, #2d7f8f, #4dbdd4)',
+                      background: 'linear-gradient(95deg, #31b845, #5ae872)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text',

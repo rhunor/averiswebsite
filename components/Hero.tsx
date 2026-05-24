@@ -44,7 +44,7 @@ function GrowthChart() {
                 style={{
                   width: `${m.pct}%`,
                   transformOrigin: 'left',
-                  background: 'linear-gradient(90deg, #2d7f8f, #4dbdd4)',
+                  background: 'linear-gradient(90deg, #31b845, #5ae872)',
                 }}
               />
             </div>
@@ -90,7 +90,7 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 55% 70% at 78% 38%, rgba(45,127,143,0.10) 0%, transparent 65%), radial-gradient(ellipse 40% 55% at 8% 92%, rgba(26,58,82,0.55) 0%, transparent 52%)',
+            'radial-gradient(ellipse 55% 70% at 78% 38%, rgba(49,184,69,0.10) 0%, transparent 65%), radial-gradient(ellipse 40% 55% at 8% 92%, rgba(14,32,40,0.55) 0%, transparent 52%)',
         }}
       />
 
@@ -103,7 +103,7 @@ export default function Hero() {
         style={{
           top: '54%',
           background:
-            'linear-gradient(90deg, rgba(45,127,143,0.0), rgba(45,127,143,0.16), rgba(45,127,143,0.0))',
+            'linear-gradient(90deg, rgba(49,184,69,0.0), rgba(49,184,69,0.16), rgba(49,184,69,0.0))',
         }}
       />
 
@@ -162,7 +162,7 @@ export default function Hero() {
               <motion.span
                 className="block font-serif italic font-extrabold text-[clamp(50px,6.4vw,94px)] leading-[1.0] tracking-[-0.04em]"
                 style={{
-                  background: 'linear-gradient(95deg, #2d7f8f 20%, #4dbdd4 80%)',
+                  background: 'linear-gradient(95deg, #31b845 20%, #5ae872 80%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',

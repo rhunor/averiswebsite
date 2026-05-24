@@ -12,13 +12,13 @@ export default function CTA() {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true, margin: '-60px' }}
           className="relative overflow-hidden rounded-[32px] px-16 py-[90px] text-center"
-          style={{ background: 'linear-gradient(138deg, #0d2035 0%, #1a3a52 48%, #1f5f6e 100%)' }}
+          style={{ background: 'linear-gradient(138deg, #0e2028 0%, #122f38 48%, #24963b 100%)' }}
         >
           {/* Rotating conic gradient */}
           <div
             className="absolute -top-1/2 -left-1/2 w-[200%] h-[200%] animate-[ctaSpin_22s_linear_infinite] pointer-events-none"
             style={{
-              background: 'conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(45,127,143,0.15) 60deg, transparent 120deg, rgba(45,127,143,0.08) 180deg, transparent 240deg, rgba(45,127,143,0.12) 300deg, transparent 360deg)',
+              background: 'conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(49,184,69,0.15) 60deg, transparent 120deg, rgba(49,184,69,0.08) 180deg, transparent 240deg, rgba(49,184,69,0.12) 300deg, transparent 360deg)',
             }}
           />
           {/* Noise overlay */}
@@ -36,7 +36,7 @@ export default function CTA() {
               <em
                 className="font-serif italic font-extrabold"
                 style={{
-                  background: 'linear-gradient(90deg, #4dbdd4, #7dd3fc)',
+                  background: 'linear-gradient(90deg, #5ae872, #86efac)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',

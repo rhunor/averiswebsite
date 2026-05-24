@@ -8,25 +8,25 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans:  ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        sans:  ['var(--font-jakarta)', 'system-ui', 'sans-serif'],
         serif: ['var(--font-playfair)', 'Georgia', 'serif'],
       },
       colors: {
         navy: {
-          darkest: '#070f1a',
-          dark:    '#0d2035',
-          DEFAULT: '#1a3a52',
-          light:   '#254e70',
+          darkest: '#07141a',
+          dark:    '#0e2028',
+          DEFAULT: '#122f38',
+          light:   '#1a4055',
         },
         teal: {
-          dark:    '#1f5f6e',
-          DEFAULT: '#2d7f8f',
-          light:   '#3a9db0',
-          bright:  '#4dbdd4',
+          dark:    '#24963b',
+          DEFAULT: '#31b845',
+          light:   '#40d457',
+          bright:  '#5ae872',
         },
       },
       backgroundImage: {
-        'gradient-navy-teal': 'linear-gradient(138deg, #0d2035 0%, #1a3a52 48%, #1f5f6e 100%)',
+        'gradient-navy-teal': 'linear-gradient(138deg, #0e2028 0%, #122f38 48%, #24963b 100%)',
       },
       animation: {
         marquee:  'marquee 30s linear infinite',

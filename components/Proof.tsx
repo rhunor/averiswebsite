@@ -61,7 +61,7 @@ export default function Proof() {
     <section id="proof" className="py-[120px] bg-navy-darkest relative overflow-hidden">
       {/* Ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[760px] h-[760px] rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(circle, rgba(45,127,143,0.08) 0%, transparent 65%)' }} />
+        style={{ background: 'radial-gradient(circle, rgba(49,184,69,0.08) 0%, transparent 65%)' }} />
 
       <div className="max-w-[1240px] mx-auto px-8 relative z-10">
 
