@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import ScrambleText from './ScrambleText'
+import { UpArrowIcon, NairaIcon } from './BrandIcons'
 
 const MONTHS = [
   { label: 'Month 1', amount: '₦295K', pct: 26 },
@@ -74,7 +75,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen bg-navy-darkest relative overflow-hidden flex items-start lg:items-center pt-[130px] pb-24"
+      className="min-h-screen bg-navy-darkest text-white relative overflow-hidden flex items-start lg:items-center pt-[130px] pb-24"
     >
       {/* Large ₦ watermark */}
       <div
@@ -93,6 +94,17 @@ export default function Hero() {
             'radial-gradient(ellipse 55% 70% at 78% 38%, rgba(49,184,69,0.10) 0%, transparent 65%), radial-gradient(ellipse 40% 55% at 8% 92%, rgba(14,32,40,0.55) 0%, transparent 52%)',
         }}
       />
+
+      {/* Polkadot pattern */}
+      <div className="absolute inset-0 polkadot-bg opacity-[0.28] pointer-events-none" />
+
+      {/* Floating brand icon decorations */}
+      <div className="absolute top-[16%] right-[2%] pointer-events-none opacity-[0.06] text-teal-light hidden lg:block">
+        <UpArrowIcon className="w-[300px] h-auto" />
+      </div>
+      <div className="absolute bottom-[10%] left-[1%] pointer-events-none opacity-[0.045] text-teal-light hidden lg:block">
+        <NairaIcon className="w-[200px] h-auto" />
+      </div>
 
       {/* Noise */}
       <div className="absolute inset-0 noise opacity-[0.028] pointer-events-none" />

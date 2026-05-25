@@ -70,3 +70,12 @@ html { scroll-behavior: auto; }
   z-index: 0;
 }
 .group:hover .svc-overlay { transform: translateY(0); }
+
+/* ── Brand patterns ── */
+.polkadot-bg {
+  background-image:
+    radial-gradient(circle, rgba(49,184,69,0.45) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(49,184,69,0.18) 1px, transparent 1px);
+  background-size: 22px 22px, 11px 11px;
+  background-position: 0 0, 5.5px 5.5px;
+}

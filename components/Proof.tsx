@@ -59,6 +59,9 @@ const testimonials = [
 export default function Proof() {
   return (
     <section id="proof" className="py-[120px] bg-navy-darkest relative overflow-hidden">
+      {/* Polkadot pattern */}
+      <div className="absolute inset-0 polkadot-bg opacity-[0.22] pointer-events-none" />
+
       {/* Ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[760px] h-[760px] rounded-full pointer-events-none"
         style={{ background: 'radial-gradient(circle, rgba(49,184,69,0.08) 0%, transparent 65%)' }} />

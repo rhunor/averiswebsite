@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import SmoothScrollProvider from '@/components/SmoothScrollProvider'
 import Cursor from '@/components/Cursor'
+import { ThemeProvider } from '@/components/ThemeProvider'
 
 export const metadata: Metadata = {
   title: 'Averis Academy — Learn Digital Marketing & Earn Online in Nigeria',
@@ -58,6 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        <script dangerouslySetInnerHTML={{ __html: `try{const t=localStorage.getItem('theme');const d=t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(d)document.documentElement.classList.add('dark')}catch(e){}` }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -65,11 +67,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body className="font-sans bg-white text-slate-900 overflow-x-hidden antialiased">
-        <SmoothScrollProvider>
-          <Cursor />
-          {children}
-        </SmoothScrollProvider>
+      <body className="font-sans bg-white dark:bg-navy-darkest text-slate-900 dark:text-white overflow-x-hidden antialiased transition-colors duration-300">
+        <ThemeProvider>
+          <SmoothScrollProvider>
+            <Cursor />
+            {children}
+          </SmoothScrollProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

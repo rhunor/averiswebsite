@@ -1,10 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { BadgeIcon, CommunityIcon, RocketIcon } from './BrandIcons'
 
 interface CardData {
   phase: string
-  icon: string
+  icon: React.ReactNode
   title: string
   price: string
   desc: string
@@ -14,7 +15,7 @@ interface CardData {
 const cards: CardData[] = [
   {
     phase: 'Foundation',
-    icon: '💰',
+    icon: <BadgeIcon className="w-9 h-auto" />,
     title: 'Averis Academy',
     price: '₦35,000 / 6 Months',
     desc: 'Learn digital marketing to earn ₦500K–₦1M/month. Four structured modules, weekly coaching, and forced accountability that gets results.',
@@ -28,7 +29,7 @@ const cards: CardData[] = [
   },
   {
     phase: 'Community',
-    icon: '🎯',
+    icon: <CommunityIcon className="w-9 h-auto" />,
     title: 'Coaching & Accountability',
     price: 'Included with Academy',
     desc: 'You are never alone. Weekly live sessions, peer accountability trios, and a private student community keep you on track every single day.',
@@ -42,7 +43,7 @@ const cards: CardData[] = [
   },
   {
     phase: 'Advanced',
-    icon: '🚀',
+    icon: <RocketIcon className="w-9 h-auto" />,
     title: 'Income Acceleration',
     price: 'Included with Academy',
     desc: 'Once you are earning, we show you how to scale. Advanced ad strategies, automation systems, and the freelance/agency model to 10× your income.',
@@ -63,7 +64,7 @@ function ServiceCard({ card, index }: { card: CardData; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: index * 0.12 }}
       viewport={{ once: true, margin: '-60px' }}
-      className="relative overflow-hidden rounded-2xl border border-[#eef2f6] bg-[#f5f8fa] p-[34px_26px] cursor-pointer group hover:-translate-y-[7px] hover:border-transparent hover:shadow-[0_30px_60px_rgba(26,58,82,0.22)] transition-all duration-500"
+      className="relative overflow-hidden rounded-2xl border border-[#eef2f6] dark:border-white/8 bg-[#f5f8fa] dark:bg-navy-dark/70 p-[34px_26px] cursor-pointer group hover:-translate-y-[7px] hover:border-transparent hover:shadow-[0_30px_60px_rgba(26,58,82,0.22)] transition-all duration-500"
     >
       {/* Sliding dark overlay */}
       <div className="svc-overlay" />
@@ -74,11 +75,11 @@ function ServiceCard({ card, index }: { card: CardData; index: number }) {
           {card.phase}
         </div>
 
-        <div className="w-[52px] h-[52px] rounded-[13px] bg-teal/10 border border-teal/20 flex items-center justify-center text-[23px] mb-[22px] group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300">
+        <div className="w-[52px] h-[52px] rounded-[13px] bg-teal/10 border border-teal/20 flex items-center justify-center mb-[22px] group-hover:bg-white/10 group-hover:border-white/20 transition-all duration-300 text-teal group-hover:text-white p-[10px]">
           {card.icon}
         </div>
 
-        <h3 className="text-[21px] font-black text-navy-dark tracking-tight mb-[9px] leading-[1.2] group-hover:text-white transition-colors duration-300">
+        <h3 className="text-[21px] font-black text-navy-dark dark:text-white tracking-tight mb-[9px] leading-[1.2] group-hover:text-white transition-colors duration-300">
           {card.title}
         </h3>
 
@@ -86,7 +87,7 @@ function ServiceCard({ card, index }: { card: CardData; index: number }) {
           {card.price}
         </div>
 
-        <p className="text-[14px] text-slate-600 leading-[1.72] mb-[22px] group-hover:text-white/62 transition-colors duration-300">
+        <p className="text-[14px] text-slate-600 dark:text-white/55 leading-[1.72] mb-[22px] group-hover:text-white/62 transition-colors duration-300">
           {card.desc}
         </p>
 
@@ -108,7 +109,7 @@ function ServiceCard({ card, index }: { card: CardData; index: number }) {
 
 export default function Services() {
   return (
-    <section id="services" className="py-[120px] bg-white">
+    <section id="services" className="py-[120px] bg-white dark:bg-navy-darkest">
       <div className="max-w-[1240px] mx-auto px-8">
 
         {/* Header */}
@@ -129,7 +130,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
             viewport={{ once: true, margin: '-60px' }}
-            className="text-[clamp(32px,4.2vw,56px)] font-black tracking-[-0.04em] leading-[1.06] text-navy-dark mb-5"
+            className="text-[clamp(32px,4.2vw,56px)] font-black tracking-[-0.04em] leading-[1.06] text-navy-dark dark:text-white mb-5"
           >
             Everything you need<br />
             to earn <em className="font-serif italic font-extrabold text-teal">online.</em>
@@ -139,7 +140,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
             viewport={{ once: true, margin: '-60px' }}
-            className="text-[17px] text-slate-600 leading-[1.78]"
+            className="text-[17px] text-slate-600 dark:text-white/55 leading-[1.78]"
           >
             One structured program. Live coaching. A community that holds you accountable.
             Everything built to get you earning real money online — in Nigeria.

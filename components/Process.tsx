@@ -1,16 +1,17 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { HumanIcon, MountainIcon } from './BrandIcons'
 
-const steps = [
+const steps: { icon: React.ReactNode; num: string; title: string; body: string }[] = [
   {
-    icon: '🎓',
+    icon: <HumanIcon className="w-9 h-auto" />,
     num: 'Step 01',
     title: 'Learn',
     body: 'Join Averis Academy for ₦35,000. Four comprehensive modules, weekly live coaching, and an accountability trio that checks in on you every single day.',
   },
   {
-    icon: '💸',
+    icon: <MountainIcon className="w-9 h-auto" />,
     num: 'Step 02',
     title: 'Earn',
     body: 'Run ads, build audiences, sell digital products. Most students make their first ₦100,000 within 30 days. By Month 6: ₦500K–₦1M/month.',
@@ -19,7 +20,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-[120px] bg-white">
+    <section id="process" className="py-[120px] bg-white dark:bg-navy-darkest">
       <div className="max-w-[1240px] mx-auto px-8">
 
         {/* Header */}
@@ -40,7 +41,7 @@ export default function Process() {
             initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
             viewport={{ once: true, margin: '-60px' }}
-            className="text-[clamp(32px,4.2vw,56px)] font-black tracking-[-0.04em] leading-[1.06] text-navy-dark mb-5"
+            className="text-[clamp(32px,4.2vw,56px)] font-black tracking-[-0.04em] leading-[1.06] text-navy-dark dark:text-white mb-5"
           >
             Two steps to{' '}
             <em className="font-serif italic font-extrabold text-teal">earning online.</em>
@@ -50,7 +51,7 @@ export default function Process() {
             initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
             viewport={{ once: true, margin: '-60px' }}
-            className="text-[17px] text-slate-600 leading-[1.78]"
+            className="text-[17px] text-slate-600 dark:text-white/55 leading-[1.78]"
           >
             No confusion. No fluff. Learn the skill, then use it to earn real money online.
           </motion.p>
@@ -86,7 +87,7 @@ export default function Process() {
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: 'spring', stiffness: 300 }}
-                className="w-[86px] h-[86px] rounded-full border-2 border-[#eef2f6] bg-white flex items-center justify-center mx-auto mb-7 text-[30px] cursor-default group-hover:border-teal group-hover:shadow-[0_18px_44px_rgba(26,58,82,0.28)] transition-all duration-400"
+                className="w-[86px] h-[86px] rounded-full border-2 border-[#eef2f6] dark:border-white/10 bg-white dark:bg-navy-dark flex items-center justify-center mx-auto mb-7 cursor-default group-hover:border-teal group-hover:shadow-[0_18px_44px_rgba(26,58,82,0.28)] transition-all duration-400 text-teal group-hover:text-teal-dark p-[22px]"
                 style={{ boxShadow: 'none' }}
               >
                 {step.icon}
@@ -94,10 +95,10 @@ export default function Process() {
               <div className="text-[11px] font-bold tracking-[0.12em] uppercase text-teal mb-[9px]">
                 {step.num}
               </div>
-              <h3 className="text-[26px] font-black text-navy-dark tracking-tight mb-3">
+              <h3 className="text-[26px] font-black text-navy-dark dark:text-white tracking-tight mb-3">
                 {step.title}
               </h3>
-              <p className="text-[14px] text-slate-600 leading-[1.78]">{step.body}</p>
+              <p className="text-[14px] text-slate-600 dark:text-white/55 leading-[1.78]">{step.body}</p>
             </motion.div>
           ))}
         </div>

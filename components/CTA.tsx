@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { TrianglePattern, RocketIcon } from './BrandIcons'
 
 export default function CTA() {
   return (
@@ -23,6 +24,10 @@ export default function CTA() {
           />
           {/* Noise overlay */}
           <div className="absolute inset-0 noise opacity-[0.025] pointer-events-none" />
+
+          {/* Brand decorations */}
+          <TrianglePattern className="absolute -left-12 -bottom-16 w-[320px] h-auto text-teal-light opacity-[0.10] pointer-events-none hidden lg:block" />
+          <RocketIcon className="absolute right-[6%] top-[12%] w-[160px] h-auto text-teal-light opacity-[0.08] pointer-events-none hidden lg:block" />
 
           {/* Content */}
           <div className="relative z-10">

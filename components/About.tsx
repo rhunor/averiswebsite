@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { TrianglePattern, ShieldIcon } from './BrandIcons'
 
 const fadeUp = (delay = 0) => ({
   hidden: { opacity: 0, y: 48 },
@@ -30,13 +31,17 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-[120px] bg-[#f5f8fa] relative overflow-hidden"
+      className="py-[120px] bg-[#f5f8fa] dark:bg-navy-dark relative overflow-hidden"
     >
       {/* top line decoration */}
       <div
         className="absolute top-0 left-0 right-0 h-[1px]"
         style={{ background: 'linear-gradient(90deg, transparent, rgba(49,184,69,0.35), transparent)' }}
       />
+
+      {/* Decorations */}
+      <TrianglePattern className="absolute -right-16 -bottom-20 w-[420px] h-auto text-teal opacity-[0.07] pointer-events-none hidden lg:block" />
+      <ShieldIcon className="absolute left-[3%] bottom-[12%] w-[200px] h-auto text-teal opacity-[0.05] pointer-events-none hidden lg:block" />
 
       <div className="max-w-[1240px] mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -57,7 +62,7 @@ export default function About() {
             <motion.h2
               variants={fadeUp(0.1)} initial="hidden"
               whileInView="show" viewport={{ once: true, margin: '-60px' }}
-              className="text-[clamp(30px,3.6vw,50px)] font-black tracking-[-0.04em] leading-[1.09] text-navy-dark mb-6"
+              className="text-[clamp(30px,3.6vw,50px)] font-black tracking-[-0.04em] leading-[1.09] text-navy-dark dark:text-white mb-6"
             >
               You&apos;re working hard.<br />
               But you&apos;re still{' '}
@@ -68,7 +73,7 @@ export default function About() {
             <motion.p
               variants={fadeUp(0.2)} initial="hidden"
               whileInView="show" viewport={{ once: true, margin: '-60px' }}
-              className="text-[16px] text-slate-600 leading-[1.8] mb-4"
+              className="text-[16px] text-slate-600 dark:text-white/55 leading-[1.8] mb-4"
             >
               You trade time for money — and time has a ceiling. Your salary can&apos;t scale. Your
               hours can&apos;t grow. And inflation keeps eating what little you save. That&apos;s the trap
@@ -78,7 +83,7 @@ export default function About() {
             <motion.p
               variants={fadeUp(0.28)} initial="hidden"
               whileInView="show" viewport={{ once: true, margin: '-60px' }}
-              className="text-[16px] text-slate-600 leading-[1.8] mb-8"
+              className="text-[16px] text-slate-600 dark:text-white/55 leading-[1.8] mb-8"
             >
               Averis Academy breaks that cycle. We teach you a skill that pays you whether you&apos;re
               awake or asleep. 
@@ -97,7 +102,7 @@ export default function About() {
                   <div className="w-[23px] h-[23px] rounded-full bg-teal flex items-center justify-center text-white text-[12px] font-bold flex-shrink-0 mt-[2px]">
                     ✓
                   </div>
-                  <p className="text-[15px] text-slate-800 leading-[1.6]">
+                  <p className="text-[15px] text-slate-800 dark:text-white/75 leading-[1.6]">
                     <strong className="font-bold">{c.title}</strong> — {c.text}
                   </p>
                 </motion.div>
