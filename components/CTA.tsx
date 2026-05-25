@@ -5,14 +5,14 @@ import { TrianglePattern, RocketIcon } from './BrandIcons'
 
 export default function CTA() {
   return (
-    <section id="contact" className="py-[100px] bg-[#f5f8fa]">
-      <div className="max-w-[1240px] mx-auto px-8">
+    <section id="contact" className="py-[70px] md:py-[100px] bg-[#f5f8fa]">
+      <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
         <motion.div
           initial={{ opacity: 0, scale: 0.94 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true, margin: '-60px' }}
-          className="relative overflow-hidden rounded-[32px] px-16 py-[90px] text-center"
+          className="relative overflow-hidden rounded-[24px] sm:rounded-[32px] px-6 sm:px-16 py-[60px] sm:py-[90px] text-center"
           style={{ background: 'linear-gradient(138deg, #0e2028 0%, #122f38 48%, #24963b 100%)' }}
         >
           {/* Rotating conic gradient */}
@@ -55,7 +55,7 @@ export default function CTA() {
               initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.25 }}
               viewport={{ once: true, margin: '-60px' }}
-              className="text-[18px] text-white/75 max-w-[470px] mx-auto leading-[1.72] mb-11"
+              className="text-[16px] sm:text-[18px] text-white/75 max-w-[470px] mx-auto leading-[1.72] mb-8 sm:mb-11"
             >
               Join 70+ Nigerians already building wealth with the Averis system. Your first
               ₦100,000 could be 30 days away.
@@ -65,20 +65,20 @@ export default function CTA() {
               initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.35 }}
               viewport={{ once: true, margin: '-60px' }}
-              className="flex gap-4 justify-center flex-wrap"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center"
             >
               <a
                 href="https://wa.me/2348148818354"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-[10px] px-9 py-[18px] bg-white text-navy-dark text-[15px] font-black rounded-lg hover:-translate-y-[2px] hover:shadow-[0_18px_44px_rgba(0,0,0,0.22)] transition-all duration-300 relative overflow-hidden group"
+                className="inline-flex items-center justify-center gap-[10px] w-full sm:w-auto px-8 sm:px-9 py-[16px] sm:py-[18px] bg-white text-navy-dark text-[15px] font-black rounded-lg hover:-translate-y-[2px] hover:shadow-[0_18px_44px_rgba(0,0,0,0.22)] transition-all duration-300 relative overflow-hidden group"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-black/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500" />
                 📱 WhatsApp Us Now
               </a>
               <a
                 href="mailto:hello@averisacademy.com"
-                className="inline-flex items-center gap-[10px] px-9 py-[18px] bg-transparent text-white text-[15px] font-black rounded-lg border border-white/28 hover:border-white/65 hover:bg-white/8 hover:-translate-y-[2px] transition-all duration-300"
+                className="inline-flex items-center justify-center gap-[10px] w-full sm:w-auto px-8 sm:px-9 py-[16px] sm:py-[18px] bg-transparent text-white text-[15px] font-black rounded-lg border border-white/28 hover:border-white/65 hover:bg-white/8 hover:-translate-y-[2px] transition-all duration-300"
               >
                 ✉️ Send an Email
               </a>

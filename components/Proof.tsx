@@ -58,7 +58,7 @@ const testimonials = [
 
 export default function Proof() {
   return (
-    <section id="proof" className="py-[120px] bg-navy-darkest relative overflow-hidden">
+    <section id="proof" className="py-[80px] md:py-[120px] bg-navy-darkest relative overflow-hidden">
       {/* Polkadot pattern */}
       <div className="absolute inset-0 polkadot-bg opacity-[0.22] pointer-events-none" />
 
@@ -66,10 +66,10 @@ export default function Proof() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[760px] h-[760px] rounded-full pointer-events-none"
         style={{ background: 'radial-gradient(circle, rgba(49,184,69,0.08) 0%, transparent 65%)' }} />
 
-      <div className="max-w-[1240px] mx-auto px-8 relative z-10">
+      <div className="max-w-[1240px] mx-auto px-5 sm:px-8 relative z-10">
 
         {/* Header */}
-        <div className="text-center max-w-[560px] mx-auto mb-16">
+        <div className="text-center max-w-[560px] mx-auto mb-10 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
@@ -108,7 +108,7 @@ export default function Proof() {
           initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
           viewport={{ once: true, margin: '-60px' }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-[1px] bg-white/6 border border-white/6 rounded-2xl overflow-hidden mb-[60px]"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-[1px] bg-white/6 border border-white/6 rounded-2xl overflow-hidden mb-[40px] md:mb-[60px]"
         >
           {stats.map((s, i) => (
             <div

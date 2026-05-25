@@ -20,11 +20,11 @@ const steps: { icon: React.ReactNode; num: string; title: string; body: string }
 
 export default function Process() {
   return (
-    <section id="process" className="py-[120px] bg-white dark:bg-navy-darkest">
-      <div className="max-w-[1240px] mx-auto px-8">
+    <section id="process" className="py-[80px] md:py-[120px] bg-white dark:bg-navy-darkest">
+      <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
 
         {/* Header */}
-        <div className="text-center max-w-[540px] mx-auto mb-20">
+        <div className="text-center max-w-[540px] mx-auto mb-12 md:mb-20">
           <motion.div
             initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}

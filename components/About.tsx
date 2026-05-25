@@ -31,7 +31,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-[120px] bg-[#f5f8fa] dark:bg-navy-dark relative overflow-hidden"
+      className="py-[80px] md:py-[120px] bg-[#f5f8fa] dark:bg-navy-dark relative overflow-hidden"
     >
       {/* top line decoration */}
       <div
@@ -43,8 +43,8 @@ export default function About() {
       <TrianglePattern className="absolute -right-16 -bottom-20 w-[420px] h-auto text-teal opacity-[0.07] pointer-events-none hidden lg:block" />
       <ShieldIcon className="absolute left-[3%] bottom-[12%] w-[200px] h-auto text-teal opacity-[0.05] pointer-events-none hidden lg:block" />
 
-      <div className="max-w-[1240px] mx-auto px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* ── Left ── */}
           <div>
@@ -182,7 +182,7 @@ export default function About() {
 
             {/* Floating badge */}
             <motion.div
-              className="absolute -top-4 -right-4 bg-white rounded-2xl p-[13px_16px] flex items-center gap-[10px] shadow-[0_16px_48px_rgba(0,0,0,0.16)] z-10"
+              className="hidden sm:flex absolute -top-4 -right-4 bg-white rounded-2xl p-[13px_16px] items-center gap-[10px] shadow-[0_16px_48px_rgba(0,0,0,0.16)] z-10"
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
             >

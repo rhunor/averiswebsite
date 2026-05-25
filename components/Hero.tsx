@@ -75,7 +75,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen bg-navy-darkest text-white relative overflow-hidden flex items-start lg:items-center pt-[130px] pb-24"
+      className="min-h-screen bg-navy-darkest text-white relative overflow-hidden flex items-start lg:items-center pt-[95px] sm:pt-[130px] pb-14 sm:pb-24"
     >
       {/* Large ₦ watermark */}
       <div
@@ -119,7 +119,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="max-w-[1240px] mx-auto px-8 relative z-[2] w-full grid grid-cols-1 lg:grid-cols-[1.05fr_0.82fr] gap-20 items-center">
+      <div className="max-w-[1240px] mx-auto px-5 sm:px-8 relative z-[2] w-full grid grid-cols-1 lg:grid-cols-[1.05fr_0.82fr] gap-10 lg:gap-20 items-center">
 
         {/* ── Left ── */}
         <div>
@@ -128,7 +128,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: -18 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="flex items-center gap-4 mb-10"
+            className="flex items-center gap-3 mb-7 sm:mb-10"
           >
             <div className="h-[1px] w-10 bg-teal/55" />
             <span className="text-[11px] font-bold tracking-[0.16em] uppercase text-teal-bright/70">
@@ -137,10 +137,10 @@ export default function Hero() {
           </motion.div>
 
           {/* Headline — clip-reveal animation */}
-          <h1 className="mb-9">
+          <h1 className="mb-7 sm:mb-9">
             <div className="overflow-hidden">
               <motion.span
-                className="block text-[clamp(44px,5.8vw,86px)] font-black leading-[1.02] tracking-[-0.045em] text-white/55"
+                className="block text-[clamp(36px,5.8vw,86px)] font-black leading-[1.02] tracking-[-0.045em] text-white/55"
                 initial={{ y: '112%' }}
                 animate={{ y: '0%' }}
                 transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.05 }}
@@ -151,7 +151,7 @@ export default function Hero() {
 
             <div className="overflow-hidden">
               <motion.span
-                className="block text-[clamp(44px,5.8vw,86px)] font-black leading-[1.02] tracking-[-0.045em] text-white"
+                className="block text-[clamp(36px,5.8vw,86px)] font-black leading-[1.02] tracking-[-0.045em] text-white"
                 initial={{ y: '112%' }}
                 animate={{ y: '0%' }}
                 transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.18 }}
@@ -172,7 +172,7 @@ export default function Hero() {
             {/* "We Don't." — teal serif italic + scramble */}
             <div className="overflow-hidden">
               <motion.span
-                className="block font-serif italic font-extrabold text-[clamp(50px,6.4vw,94px)] leading-[1.0] tracking-[-0.04em]"
+                className="block font-serif italic font-extrabold text-[clamp(40px,6.4vw,94px)] leading-[1.0] tracking-[-0.04em]"
                 style={{
                   background: 'linear-gradient(95deg, #31b845 20%, #5ae872 80%)',
                   WebkitBackgroundClip: 'text',
@@ -193,7 +193,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.6 }}
-            className="text-[clamp(15px,1.4vw,17px)] text-white/50 leading-[1.88] max-w-[490px] mb-11"
+            className="text-[clamp(15px,1.4vw,17px)] text-white/50 leading-[1.88] max-w-[490px] mb-8 sm:mb-11"
           >
             {/* Phase 1 —  */}
             Earn{' '}
@@ -209,11 +209,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.7 }}
-            className="flex flex-col items-start gap-[14px] mb-14"
+            className="flex flex-col items-stretch sm:items-start gap-3 sm:gap-[14px] mb-9 sm:mb-14"
           >
             <a
               href="mailto:hello@averisacademy.com"
-              className="inline-flex items-center gap-[10px] px-8 py-[15px] bg-teal text-white text-[15px] font-bold rounded-lg hover:bg-teal-light hover:-translate-y-[2px] hover:shadow-[0_20px_48px_rgba(45,127,143,0.42)] transition-all duration-300 relative overflow-hidden group"
+              className="inline-flex items-center justify-center gap-[10px] px-8 py-[15px] bg-teal text-white text-[15px] font-bold rounded-lg hover:bg-teal-light hover:-translate-y-[2px] hover:shadow-[0_20px_48px_rgba(45,127,143,0.42)] transition-all duration-300 relative overflow-hidden group"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.12] to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500" />
               Book a Free Strategy Call
@@ -232,12 +232,52 @@ export default function Hero() {
             </a>
           </motion.div>
 
+          {/* Mobile trajectory card — hidden on lg where full chart shows */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.82 }}
+            className="lg:hidden bg-white/[0.05] border border-white/[0.09] rounded-2xl p-5 mb-8"
+          >
+            <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-white/40 mb-4 text-center">
+              Typical Member Trajectory
+            </div>
+            <div className="grid grid-cols-3 gap-2 text-center mb-4">
+              {[
+                { label: 'Month 1', amt: '₦295K' },
+                { label: 'Month 3', amt: '₦612K' },
+                { label: 'Month 6', amt: '₦1.1M+' },
+              ].map(m => (
+                <div key={m.label}>
+                  <div className="text-[16px] sm:text-[18px] font-black text-teal-bright tracking-tight">{m.amt}</div>
+                  <div className="text-[10px] text-white/40 mt-[3px]">{m.label}</div>
+                </div>
+              ))}
+            </div>
+            <div className="pt-3 border-t border-white/[0.06] flex justify-around">
+              <div className="text-center">
+                <div className="text-[13px] font-black text-white">70+</div>
+                <div className="text-[10px] text-white/35">Members</div>
+              </div>
+              <div className="w-px bg-white/[0.08]" />
+              <div className="text-center">
+                <div className="text-[13px] font-black text-white">₦2.4M</div>
+                <div className="text-[10px] text-white/35">Week 1 Rev.</div>
+              </div>
+              <div className="w-px bg-white/[0.08]" />
+              <div className="text-center">
+                <div className="text-[13px] font-black text-white">May &apos;25</div>
+                <div className="text-[10px] text-white/35">Launched</div>
+              </div>
+            </div>
+          </motion.div>
+
           {/* Inline stats */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.86 }}
-            className="flex items-center flex-wrap gap-x-5 gap-y-2 text-[13px] text-slate-300 border-t border-white/[0.12] pt-7"
+            className="hidden sm:flex items-center flex-wrap gap-x-5 gap-y-2 text-[13px] text-slate-300 border-t border-white/[0.12] pt-5 sm:pt-7"
           >
             <span>
               <strong className="text-white font-bold">70+</strong> members enrolled

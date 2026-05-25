@@ -109,11 +109,11 @@ function ServiceCard({ card, index }: { card: CardData; index: number }) {
 
 export default function Services() {
   return (
-    <section id="services" className="py-[120px] bg-white dark:bg-navy-darkest">
-      <div className="max-w-[1240px] mx-auto px-8">
+    <section id="services" className="py-[80px] md:py-[120px] bg-white dark:bg-navy-darkest">
+      <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
 
         {/* Header */}
-        <div className="text-center max-w-[620px] mx-auto mb-[72px]">
+        <div className="text-center max-w-[620px] mx-auto mb-[48px] md:mb-[72px]">
           <motion.div
             initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
